@@ -84,3 +84,9 @@ function eraseCookie(name)
 	createCookie(name, "", -1);
 }
 
+*******************************TO GET VALUES INSIDE THE QUERY STRING******************************************
+function getParameterByName(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+}
+//TO RETRIVE THE VALUES FROM THE QUERY STRING
+var variable_name=getParameterbyName(name);
