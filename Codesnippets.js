@@ -90,3 +90,9 @@ function getParameterByName(name) {
 }
 //TO RETRIVE THE VALUES FROM THE QUERY STRING
 var variable_name=getParameterbyName(name);
+
+
+
+**********************To send values from child form to parent form*********************************
+	SignaturePadPopup = ModalLessWindowByScreenPercent('SignaturePadScriptel.html?DatabaseID=' + GetTWin().DatabaseID + '&DefaultRoleTitle=' + event.target.getAttribute("data-DefaultRoleTitle") + '&RowID=' + rowID + '&ElementID=' + elementID + '&ListID=' + listID + '&StoreSignature=' + isStoreSignature, 99, 99, "CaseWorthy Scriptel Signature Pad", "yes");
+ window.opener.document.getElementById("EI-" + rowID + "-" + elementID).value = event.nonce;
